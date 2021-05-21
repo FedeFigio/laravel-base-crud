@@ -1,0 +1,25 @@
+main.index {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% / 5 - 20px);
+        border: 1px solid black;
+        img {
+            width: 100%;
+        }
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* number of lines to show */
+            -webkit-box-orient: vertical;
+        }
+        &>* {
+            margin-top: 5px;
+        }
+    }
+}
